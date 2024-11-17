@@ -42,24 +42,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const button = document.getElementById("click-here-button");
-    const message = document.getElementById("congratulations-message");
-  
-    // Verificar si ya se tocó el botón
-    const hasClicked = localStorage.getItem("buttonClicked");
-  
-    if (hasClicked) {
-      // Si ya se tocó, mostrar el mensaje y ocultar el botón
-      message.classList.remove("hidden");
-      button.classList.add("hidden");
-    }
-  
-    // Agregar evento al botón
-    button.addEventListener("click", () => {
-      // Mostrar el mensaje de felicitaciones
-      message.classList.remove("hidden");
-      button.classList.add("hidden");
-  
-      // Guardar en localStorage que se tocó el botón
-      localStorage.setItem("buttonClicked", true);
-    });
+  const message = document.getElementById("congratulations-message");
+  const giftButtonContainer = document.getElementById("gift-button-container");
+
+  // Verificar si ya se tocó el botón
+  const hasClicked = localStorage.getItem("buttonClicked");
+
+  if (hasClicked) {
+    // Si ya se tocó, mostrar el mensaje y el botón de regalo
+    message.classList.remove("hidden");
+    giftButtonContainer.classList.remove("hidden");
+    button.classList.add("hidden");
+  }
+
+  // Agregar evento al botón principal
+  button.addEventListener("click", () => {
+    // Mostrar el mensaje de felicitaciones y el botón de regalo
+    message.classList.remove("hidden");
+    giftButtonContainer.classList.remove("hidden");
+    button.classList.add("hidden");
+
+    // Guardar en localStorage que se tocó el botón
+    localStorage.setItem("buttonClicked", true);
   });
+});

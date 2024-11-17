@@ -219,3 +219,32 @@
     background: #0056b3;
     transform: scale(1.05);
   }
+
+ /* Contenedor del botón "OBTENER TANGAS" */
+#gift-button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hidden {
+  display: none; /* Ocultar elementos por defecto */
+}
+
+/* Botón de regalo */
+.gift-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background: #FF007F;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.gift-button:hover {
+  background: #E6006E;
+  transform: scale(1.05);
+}
