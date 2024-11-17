@@ -1,30 +1,221 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+  
   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 1rem;
-    background: #f9f9f9;
+    font-family: 'Roboto', sans-serif; /* Moderno y limpio */
+    background: #f4f4f9;
     color: #333;
+    height: 100vh;
+    overflow: hidden;
   }
-  header {
-    text-align: center;
-    margin-bottom: 2rem;
+  
+  .container {
+    display: flex;
+    height: 100%;
   }
-  h1 {
-    font-size: 2rem;
-    color: #007BFF;
+  
+  /* Sidebar */
+  .sidebar {
+    background: #007BFF;
+    color: white;
+    width: 60px;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
   }
-  h2 {
+  
+  .sidebar.expanded {
+    width: 250px;
+  }
+  
+  .sidebar .toggle-btn {
+    background: #0056b3;
+    border: none;
+    color: white;
     font-size: 1.5rem;
-    margin-top: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    align-self: flex-start;
+    margin: 0.5rem;
+    border-radius: 8px; /* Botón redondeado */
+    transition: background 0.3s ease;
   }
-  footer {
+  
+  .sidebar .toggle-btn:hover {
+    background: #003f7f;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  
+  .sidebar nav li {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    justify-content: center;
+  }
+  
+  .sidebar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 90%;
+    border-radius: 8px; /* Bordes redondeados para los links */
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .sidebar nav a:hover,
+  .sidebar nav a.active {
+    background: #0056b3;
+    transform: scale(1.05); /* Pequeña animación al hover */
+  }
+  
+  .sidebar .icon {
+    font-size: 1.5rem;
+  }
+  
+  /* Ocultar texto cuando el sidebar está colapsado */
+  .sidebar:not(.expanded) .text {
+    display: none;
+  }
+  
+  /* Main Content */
+  .main-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    background: white;
+    color: #007BFF;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para separar del contenido */
+    border-radius: 0 0 10px 10px; /* Bordes redondeados en la parte inferior */
+  }
+  
+  .main {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenido */
+  }
+
+ /* Cuenta regresiva */
+.countdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin-top: 2rem;
-    font-size: 0.9rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .countdown-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Temporizador */
+  .countdown-timer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .countdown-item span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 0.3rem;
+  }
+  
+  .countdown-item label {
+    font-size: 1rem;
+    font-weight: normal;
     color: #555;
+  }
+
+
+
+  /* Contenedor del home */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  
+  /* Mensaje de felicitaciones */
+  #congratulations-message {
+    font-size: 1.2rem; /* Reducir el tamaño de fuente */
+    color: #007BFF;
+    margin-bottom: 2rem;
+    padding: 1rem; /* Agregar padding para darle aire */
+    background: #f9f9f9; /* Fondo para destacar */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centrar el texto */
+    max-width: 90%; /* Limitar el ancho en dispositivos pequeños */
+    line-height: 1.5; /* Mejorar legibilidad */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Botón principal */
+  .main-button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    color: white;
+    background: #007BFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .main-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
   }

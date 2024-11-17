@@ -3,26 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Sitio Web</title>
+  <title>Mi Web Mobile</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenidos</h1>
-    <p>Información sobre X</p>
-  </header>
-  <main>
-    <section>
-      <h2>Sobre mí</h2>
-      <p>Escribí acá información básica.</p>
-    </section>
-    <section>
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:tucorreo@gmail.com">tucorreo@gmail.com</a></p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 Mi Sitio Web</p>
-  </footer>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="toggle-btn">☰</button>
+      <nav>
+        <ul>
+            <li><a href="index.html" class="active"><span class="icon">🏠</span><span class="text">Inicio</span></a></li>
+            <li><a href="countdown.html"><span class="icon">⏳</span><span class="text">Cuenta regresiva</span></a></li>
+            <li><a href="#"><span class="icon">💌</span><span class="text">Cartita de amor</span></a></li>
+            <li><a href="#"><span class="icon">🖼️</span><span class="text">Carousel de fotos</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-container">
+      <!-- Header -->
+      <header class="header">
+        <h1>Mi Web</h1>
+      </header>
+      <main class="main">
+        <section id="home-page" class="home-container">
+          <div id="congratulations-message" class="hidden">
+            <h3>FELICITACIONES</h3>
+            <p>TE GANASTE 5 BOMBACHAS A ELECCIÓN DE FORMA GRATUITA.</p>
+          </div>
+          <button id="click-here-button" class="main-button">Tocá acá</button>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
