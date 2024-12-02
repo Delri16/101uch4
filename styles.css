@@ -248,3 +248,148 @@
   background: #E6006E;
   transform: scale(1.05);
 }
+
+.back-to-home {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.main-button {
+  font-size: 1.2rem;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  background: #007BFF;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.main-button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+/* Contenedor de la carta */
+.letter-container {
+  background: white;
+  padding: 2rem;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Título */
+.letter-container h2 {
+  font-size: 1.8rem;
+  color: #FF007F;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Párrafos */
+.letter-container p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-indent: 1.5rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .letter-container {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .letter-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .letter-container p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Contenedor principal del carousel */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  max-width: 90%;
+  overflow: hidden;
+}
+
+/* Contenedor de las imágenes */
+.carousel-track-container {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Contenedor de los botones */
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Botones */
+.carousel-button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.qr-container h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#qrcode canvas {
+  margin: 0 auto;
+}

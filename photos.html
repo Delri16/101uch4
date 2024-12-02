@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cumpleaños Lolucha</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/lolico.ico">
+
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <button class="toggle-btn">☰</button>
+      <nav>
+        <ul>
+            <li><a href="index.html" ><span class="icon">🏠</span><span class="text">Inicio</span></a></li>
+            <li><a href="countdown.html"><span class="icon">⏳</span><span class="text">Cuenta regresiva</span></a></li>
+            <li><a href="love-letter.html"><span class="icon">💌</span><span class="text">Cartita de amor</span></a></li>
+            <li><a href="photos.html" class="active"><span class="icon">🖼️</span><span class="text">Carousel de fotos</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <header class="header">
+          <h1>Momentos llenos de amor</h1>
+        </header>
+        <main class="main">
+          <section id="photo-carousel" class="carousel-container">
+            <div class="carousel-track-container">
+              <ul class="carousel-track"></ul>
+            </div>
+            <div class="carousel-buttons">
+              <button class="carousel-button prev" id="prev-button">⬅️</button>
+              <button class="carousel-button next" id="next-button">➡️</button>
+            </div>
+          </section>
+        </main>
+      </div>
+      <div id="qr-container" class="qr-container">
+        <div id="qrcode"></div>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</body>
+</html>
